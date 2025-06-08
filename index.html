@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <button class="create">Add Book </button>
+        </header>
+        <main>
+            <div class="card hidden">
+                <button class="close">X</button>
+                <form action="#" method="get">
+                    <div class="title">
+                        <label for="title">Book Title</label>
+                        <input name="title" id="title" type="text" required>
+                    </div>
+                    <div class="author">
+                        <label for="author">Author name</label>
+                        <input name="author" id="author" type="text" required>
+                    </div>
+                    <div class="pages">
+                        <label for="pages">No of pages</label>
+                        <input name="pages" id="pages" type="number" min="1" required>
+                    </div>
+                    <div class="read">
+                        <label for="read">have you read yet?</label>
+                        <select name="read" id="read">
+                            <option value="yes">yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="submit">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="books">
+                
+                
+            </div>
+        </main>
+        <footer>
+            <div>
+                @createdbySanthosh
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

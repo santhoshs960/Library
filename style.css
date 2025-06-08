@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #4169e1; /* Royal Blue */
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1.5fr 5fr .5fr;
+    justify-content: center;
+    grid-template-columns: 1fr;
+}
+
+button.create {
+    width: 135px;
+    height: 50px;
+    color: white;
+    background-color: darkviolet;
+    font-size: large;
+    border-radius: 30px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: min-content auto;
+    border: 1px solid;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 4px 6px 20px;
+    position: fixed;
+    z-index: 2;
+    inset: 0; /* shorthand for = top: 0; left: 0; right: 0; bottom: 0; */
+    margin: auto;
+    background-color: white;
+
+}
+
+button.close {
+    justify-self: end;
+    background-color: #e60b0bbf;
+}
+
+form {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+form input {
+    height: 25px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+select#read {
+    margin-left: 14px;
+}
+
+.submit button {
+    height: 27px;
+    width: 100px;
+    background-color: #4169e1f5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px;
+}
+
+/* to hide and show the form */
+.hidden {
+    display: none;
+}
+
+/* layout and styling for books  */
+.books {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+main {
+    grid-row: 2/3;
+    padding: 1rem;
+}
+
+.book {
+    background-color: #ffffff;
+    border: 2px solid #cbd4ff;
+    border-radius: 12px;
+    padding: 10px;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 2px 8px;
+}
+
+.book:hover {
+    transform: scale(1.05); 
+}
+
+.book h4 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2b2d42;
+    text-transform: capitalize;
+    border-bottom: 1px solid #e0e0ff;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.delete {
+    align-self: end;
+}
+
+.body > button {
+    margin-top: 5px;
+    background-color: darkviolet;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.book_author,
+.book_pages,
+.read_status {
+  padding-left: 5px;
+}
+
+
+/* Read status with color */
+.read_status[data-status="yes"] {
+    color: green;
+    font-weight: bold;
+}
+
+.read_status[data-status="no"] {
+    color: red;
+    font-weight: bold;
+}
+
+/* Delete button */
+.delete {
+    margin-top: auto;
+    align-self: flex-end;
+}
+ 
+.delete .bin {
+    background-color: transparent;
+    color: crimson;
+    border: 1px solid crimson;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
